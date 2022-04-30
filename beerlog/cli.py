@@ -8,6 +8,7 @@ main = typer.Typer(help="Beer Management Application")
 
 console = Console()
 
+
 @main.command("add")
 def add(
     name: str,
@@ -19,8 +20,6 @@ def add(
     """Adds a new beer to database."""
     if add_beer_to_database(name, style, flavor, image, cost):
         print("🍺 Beer added to database")
-    #else:
-    #    print("\N{no_entry}")
 
 
 @main.command("list")
